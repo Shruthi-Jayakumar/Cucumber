@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="50.06">
+<testcase classname="Login Feature" name="Login with different users" time="15.036">
+<failure message="no such window: target window already closed&#10;from unknown error: web view not found&#10;  (Session info: chrome=85.0.4183.121)&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'SHRUTHIJAYAKUMA', ip: '192.168.8.107', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\Shruthi\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:57889}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: c53858adf981b41ff177af5c6bb82839&#10;*** Element info: {Using=id, value=txtUsername}" type="org.openqa.selenium.NoSuchWindowException"><![CDATA[Given i am able to navigate on to login page................................passed
+When i update the username as "linda.anderson"..............................failed
+And i update the password as "linda.anderson"...............................skipped
+And i click on the login button.............................................skipped
+Then i should see the username as "Welcome Rushikesh".......................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=85.0.4183.121)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SHRUTHIJAYAKUMA', ip: '192.168.8.107', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\Shruthi\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:57889}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: c53858adf981b41ff177af5c6bb82839
+*** Element info: {Using=id, value=txtUsername}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at StepDefinition.Login.i_update_the_username_as(Login.java:44)
+	at ✽.i update the username as "linda.anderson"(file:///D:/Jigsaw%20WorkSpace/CuCumber_Maven/src/test/resources/Login/Login.feature:31)
+]]></failure>
+</testcase>
+<testcase classname="Login Feature" name="Login with different users 2" time="17.947">
+<failure message="expected:&lt;Welcome [Linda]&gt; but was:&lt;Welcome [Rushikesh]&gt;" type="org.junit.ComparisonFailure"><![CDATA[Given i am able to navigate on to login page................................passed
+When i update the username as "linda.anderson"..............................passed
+And i update the password as "linda.anderson"...............................passed
+And i click on the login button.............................................passed
+Then i should see the username as "Welcome Rushikesh".......................failed
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<Welcome [Linda]> but was:<Welcome [Rushikesh]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at StepDefinition.Login.i_should_see_the_username_as(Login.java:64)
+	at ✽.i should see the username as "Welcome Rushikesh"(file:///D:/Jigsaw%20WorkSpace/CuCumber_Maven/src/test/resources/Login/Login.feature:34)
+]]></failure>
+</testcase>
+<testcase classname="Login Feature" name="negative Login" time="16.887">
+<system-out><![CDATA[Given i am able to navigate on to login page................................passed
+Given i am able to navigate on to login page................................passed
+When i update the username as "shruthi".....................................passed
+And i update the password as "shruthi"......................................passed
+And i click on the login button.............................................passed
+Then i should see the error as "Invalid credentials"........................passed
+]]></system-out>
+</testcase>
+</testsuite>
